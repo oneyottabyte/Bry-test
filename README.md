@@ -1,64 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+
+<h1 align="center">
+  Desafio estágio Bry
+</h1>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
 
-## About Laravel
+<h1 id="objetivo">
+	<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-readme-is-a-easy-to-build-a-developer-hub-that-adapts-to-the-user-logo-color-tal-revivo.png"/>
+  Descrição
+</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Questão 1: CRUD gerenciamento de funcionários
+Implemente uma API REST para realizar o gerenciamento de funcionários e empresas de um sistema.
+Neste cenário, cada funcionário pode pertencer a uma ou mais empresas, assim como cada empresa
+pode possuir um ou mais funcionários. As operações básicas de um CRUD deverão ser
+implementadas com os verbos HTTP e códigos de retorno HTTP apropriados, tanto para funcionários,
+como para empresas.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requisitos:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+● Na exibição dos dados do funcionário deverão ser mostradas as empresas as quais ele está
+associado, assim como na exibição dos dados da empresa os funcionários vinculados à ela
+deverão ser exibidos.
+● Os campos de cada objeto funcionário são: login, nome, cpf, e-mail, endereço e senha.
+● Os campos de cada objeto empresa são: nome, cnpj e endereço.
+● Utilize padrões de projeto.
+● Procure realizar um tratamento de erros adequado.
 
-## Learning Laravel
+# Questão 2: CRUD gerenciamento de funcionários
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Conecte o serviço desenvolvido na questão 1 a uma aplicação front-end desenvolvida com o
+framework Angular 9 ou superior. Você deve:
+● Criar o CRUD de serviços.
+● Tratar os erros de forma genérica (preparando-os para mais serviços).
+● Validar a entrada de dados. Ex: Impedir o cadastro quando o campo login possuir acentuação.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Informações Gerais:
+● É fácil encontrar um código de exemplo pronto para este fim na Internet. Você pode se basear
+nestes códigos, mas espera-se que o sistema final entregue seja robusto e estável, o que
+normalmente não é o caso de códigos de exemplo. Utilize seu conhecimento e os métodos
+adequados para garantir/provar esta robustez e estabilidade;
+● Comentários em código são bem vindos;
+● A linguagem utilizada deverá ser php 7+, utilizando o framework Laravel 6+.
+● Para a banco de dados você pode escolher entre Postgres e MySql
+● Para o servidor WEB recomendamos Apache HTTP 2.2 ou superior.● Para consumir o serviço REST você deve utilizar o Postman e exportar suas requisições em
+formato .json, enviando o arquivo junto com o projeto.
 
-## Laravel Sponsors
+A collection do postman pode ser importada no arquivo na raiz do projeto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+<h1 id="tecnologias-dependencias">
+<img height="30" src="https://img.icons8.com/fluency/50/000000/administrative-tools.png"/>
+	Tecnologias e Dependências
+</h1>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+<a name = "tech_stack"></a>
 
-## Contributing
+- PHP 8 - Versão do PHP utilizada
+- Laravel 9 - Framework de desenvolvimento
+- Mysql - Database
+- Eloquent - Abstração orm do laravel pra integração com o banco de dados
+- Postman - A collection do postman pode ser importada no arquivo na raiz do projeto
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<h1 id="desenvolvedor">
+<img height="30" src="https://img.icons8.com/color/48/000000/devpost.png"/>
+  Desenvolvedor
+</h1>
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://github.com/oneyottabyte"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/oneyottabyte" width="100px;" alt=""/><br /><sub><b>Dorian Vieira</b></sub></a><br /><a href="https://github.com/oneyottabyte" title="Dorian Vieira"></a></td>
+  </tr>
+</table>

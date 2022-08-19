@@ -57,7 +57,8 @@ formato .json, enviando o arquivo junto com o projeto.
 <a name = "tech_stack"></a>
 
 - PHP 8 - Versão do PHP utilizada
-- Laravel 9 - Framework de desenvolvimento
+- Angular 14 - Framework de desenvolvimento Frontend
+- Laravel 9 - Framework de desenvolvimento Backend
 - Mysql - Database
 - Eloquent - Abstração orm do laravel pra integração com o banco de dados
 - Postman - A collection do postman pode ser importada no arquivo na raiz do projeto

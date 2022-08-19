@@ -1,79 +1,27 @@
+# AppAngular
 
-# Setup Docker Para Projetos Laravel (8 ou 9)
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
-### Passo a passo
-Clone Repositório
-```sh
-git clone https://github.com/especializati/setup-docker-laravel.git
-```
+## Development server
 
-Clone os Arquivos do Laravel
-```sh
-git clone https://github.com/laravel/laravel.git app-laravel
-```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-Copie os arquivos docker-compose.yml, Dockerfile e o diretório docker/ para o seu projeto
-```sh
-cp -rf setup-docker-laravel/* app-laravel/
-```
-```sh
-cd app-laravel/
-```
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Build
 
-Crie o Arquivo .env
-```sh
-cp .env.example .env
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Running unit tests
 
-Atualize as variáveis de ambiente do arquivo .env
-```dosini
-APP_NAME=EspecializaTi
-APP_URL=http://localhost:8989
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=nome_que_desejar_db
-DB_USERNAME=nome_usuario
-DB_PASSWORD=senha_aqui
+## Running end-to-end tests
 
-CACHE_DRIVER=redis
-QUEUE_CONNECTION=redis
-SESSION_DRIVER=redis
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-REDIS_HOST=redis
-REDIS_PASSWORD=null
-REDIS_PORT=6379
-```
+## Further help
 
-
-Suba os containers do projeto
-```sh
-docker-compose up -d
-```
-
-
-Acessar o container
-```sh
-docker-compose exec app bash
-```
-
-
-Instalar as dependências do projeto
-```sh
-composer install
-```
-
-
-Gerar a key do projeto Laravel
-```sh
-php artisan key:generate
-```
-
-
-Acessar o projeto
-[http://localhost:8989](http://localhost:8989)
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

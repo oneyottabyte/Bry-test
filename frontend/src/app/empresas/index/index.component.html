@@ -21,7 +21,7 @@
         <td>{{ empresa.cnpj }}</td>
         <td>{{ empresa.endereco }}</td>
         <td>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-en">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <a [routerLink]="['/empresa/', empresa.id, 'view']" class="btn btn-info btn-sm">Detalhes</a>
             <a [routerLink]="['/empresa/', empresa.id, 'update']" class="btn btn-primary btn-sm">Editar</a>
             <button type="button" href="#" (click)="deleteEmpresa(empresa.id)" class="btn btn-danger btn-sm">Deletar</button>

@@ -4,14 +4,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {  Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
    
-import { Empresa } from './empresa';
-    
+import { Funcionario } from './funcionario';
+
 @Injectable({
   providedIn: 'root'
 })
-export class EmpresaService {
-    
-  private apiURL = "http://localhost:8000/api/";
+export class FuncionarioService {
+
+  private apiURL = "http://localhost:8000/api";
     
   httpOptions = {
     headers: new HttpHeaders({
@@ -21,42 +21,42 @@ export class EmpresaService {
    
   constructor(private httpClient: HttpClient) { }
     
-  getAll(): Observable<Empresa[]> {
-    return this.httpClient.get<Empresa[]>(this.apiURL + 'empresa')
+  getAll(): Observable<Funcionario[]> {
+    return this.httpClient.get<Funcionario[]>(this.apiURL + '/funcionario')
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
-  addFuncionario(empresa: any): Observable<any> {
-    return this.httpClient.post<any>(this.apiURL + 'empresa/funcionario', JSON.stringify(empresa), this.httpOptions)
+  addEmpresa(dados: any): Observable<any> {
+    return this.httpClient.post<any>(this.apiURL + '/funcionario/empresa', JSON.stringify(dados), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }  
-  create(empresa: any): Observable<Empresa> {
-    return this.httpClient.post<Empresa>(this.apiURL + 'empresa/', JSON.stringify(empresa), this.httpOptions)
+  create(funcionario: any): Observable<Funcionario> {
+    return this.httpClient.post<Funcionario>(this.apiURL + '/funcionario/', JSON.stringify(funcionario), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }  
     
-  find(id: number): Observable<Empresa> {
-    return this.httpClient.get<Empresa>(this.apiURL + 'empresa/' + id)
+  find(id: number): Observable<Funcionario> {
+    return this.httpClient.get<Funcionario>(this.apiURL + '/funcionario/' + id)
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
-  update(id: number, empresa: any): Observable<Empresa> {
-    return this.httpClient.put<Empresa>(this.apiURL + 'empresa/' + id, JSON.stringify(empresa), this.httpOptions)
+  update(id: number, funcionario: any): Observable<Funcionario> {
+    return this.httpClient.put<Funcionario>(this.apiURL + '/funcionario/' + id, JSON.stringify(funcionario), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
     
   delete(id: number){
-    return this.httpClient.delete<Empresa>(this.apiURL + 'empresa/' + id, this.httpOptions)
+    return this.httpClient.delete<Funcionario>(this.apiURL + '/funcionario/' + id, this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )

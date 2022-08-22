@@ -129,6 +129,8 @@ class FuncionarioController extends Controller
             return response()->json(['erro' => 'Impossível realizar a exclusão. O recurso solicitado não existe'], 404);
         }
 
+        $funcionario->empresas()->detach();
+        
         $funcionario->delete();
         return response()->json(['msg' => 'A funcionario foi removida com sucesso!'], 200);
     }

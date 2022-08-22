@@ -9,7 +9,7 @@ import { EmpresaService } from '../empresa.service';
 })
 export class IndexComponent implements OnInit {
 
-  empresas: Empresa[] = [];
+  empresas!: Empresa[];
 
   constructor(public empresaService: EmpresaService) { }
 

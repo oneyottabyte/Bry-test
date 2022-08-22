@@ -34,6 +34,6 @@ class Empresa extends Model
 
     public function funcionarios()
     {
-        return $this->belongsToMany('App\Models\Funcionario');
+        return $this->belongsToMany('App\Models\Funcionario')->withTimestamps();;
     }
 }

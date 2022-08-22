@@ -128,6 +128,8 @@ class EmpresaController extends Controller
         if($empresa === null) {
             return response()->json(['erro' => 'Impossível realizar a exclusão. O recurso solicitado não existe'], 404);
         }
+        
+        $empresa->funcionarios()->detach();
 
         $empresa->delete();
         return response()->json(['msg' => 'A empresa foi removida com sucesso!'], 200);

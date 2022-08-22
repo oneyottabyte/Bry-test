@@ -1,3 +1,5 @@
+import { Funcionario } from "../funcionarios/funcionario";
+
 export interface Empresa {
   id: number;
   nome: string;
@@ -5,6 +7,5 @@ export interface Empresa {
   endereco: string;
   created_at: Date;
   updated_at: Date;
-  funcionarios: [];
-
+  funcionarios: any;
 }

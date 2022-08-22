@@ -10,19 +10,17 @@ import { EmpresaService } from '../empresa.service';
 })
 export class ViewComponent implements OnInit {
 
-  id!: number;
   empresa!: Empresa;
 
   constructor(
     public empresaService: EmpresaService,
-    private route: ActivatedRoute,
-    private router: Router
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+     let id = this.route.snapshot.params['id'];
          
-    this.empresaService.find(this.id).subscribe((data: Empresa)=>{
+    this.empresaService.find(id).subscribe((data: Empresa)=>{
       this.empresa = data;
     });
   }

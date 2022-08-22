@@ -11,19 +11,19 @@ import { EmpresaService } from '../empresa.service';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
-  
+
   id!: number;
   empresa!: Empresa;
   form!: FormGroup;
 
   constructor(
-    public empresaService:EmpresaService,
+    public empresaService: EmpresaService,
     private route: ActivatedRoute,
     private router: Router
-    ) { }
+  ) { }
 
   ngOnInit(): void {
-    this.id =this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['id'];
     this.empresaService.find(this.id).subscribe((data: Empresa) => {
       this.empresa = data;
     })
@@ -33,15 +33,15 @@ export class UpdateComponent implements OnInit {
       endereco: new FormControl('', Validators.required)
     });
   }
-  get f(){
+  get f() {
     return this.form.controls;
   }
 
-  submit(){
+  submit() {
     console.log(this.form.value);
-    this.empresaService.update(this.id, this.form.value).subscribe((res:any) => {
-         console.log('Atualizado com sucesso');
-         this.router.navigateByUrl('/empresa');
+    this.empresaService.update(this.id, this.form.value).subscribe((res: any) => {
+      console.log('Empresa atualizada com sucesso!');
+      this.router.navigateByUrl('empresa');
     })
   }
 }
